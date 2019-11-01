@@ -36,9 +36,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'trackprice',
         'USER': 'root',
-        'PASSWORD': '<your_password>',
-        'HOST': 'localhost',
-        'PORT': ''
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',
+        'PORT': '3306'
 
     }
 }
