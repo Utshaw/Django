@@ -24,8 +24,26 @@
 6. Install Django <br />
 `pip install django`
 7. Create Django project <br />
-`django-admin startproject <project_name_here>` # this will create <project_name_here> directory with `manage.py` and <project_name_here> file inside 
-8. Enter inside the <project_name_here> folder and run `python manage.py runserver`
+`django-admin startproject <project_name>` # this will create <project_name> directory with `manage.py` and <project_name> file inside 
+8. Enter inside the <project_name> folder and run `python manage.py runserver`
+9. [OPTIONAL] Install MySQL client from virtual environment in order to use MySQL `pip install mysqlclient` <br />
+Troubleshooting:
+Solve mysqlclient installation problem: `sudo apt install default-libmysqlclient-dev`
+10. [OPTIONAL] Change database name in <project_name>/settings.py:
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'trackprice',
+        'USER': 'root',
+        'PASSWORD': '<your_password>',
+        'HOST': 'localhost',
+        'PORT': ''
+
+    }
+}
+```
+
  
 
 
