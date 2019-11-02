@@ -26,7 +26,7 @@
 7. Create Django project <br />
 `django-admin startproject <project_name>` # this will create <project_name> directory with `manage.py` and <project_name> file inside 
 8. Enter inside the <project_name> folder and run `python manage.py runserver`
-9. `python manage.py migrate` synchs django settings and apps
+9. `python manage.py migrate` synchs django settings and apps and database with the project
 10. [OPTIONAL] Install MySQL client from virtual environment in order to use MySQL `pip install mysqlclient` <br />
 Troubleshooting:
 Solve mysqlclient installation problem: `sudo apt install default-libmysqlclient-dev`
@@ -45,7 +45,7 @@ DATABASES = {
 }
 ```
 11. [ADMIN] Admin interface Link: http://127.0.0.1:8000/admin
-12. [ADMIN] create superuser
+12. [ADMIN] create superuser (access to the admin)
 ```
 python manage.py createsuperuser --username=<name_here> --email=<email_here>
 ```
