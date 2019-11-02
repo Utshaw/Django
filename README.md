@@ -26,10 +26,11 @@
 7. Create Django project <br />
 `django-admin startproject <project_name>` # this will create <project_name> directory with `manage.py` and <project_name> file inside 
 8. Enter inside the <project_name> folder and run `python manage.py runserver`
-9. [OPTIONAL] Install MySQL client from virtual environment in order to use MySQL `pip install mysqlclient` <br />
+9. `python manage.py migrate` synchs django settings and apps
+10. [OPTIONAL] Install MySQL client from virtual environment in order to use MySQL `pip install mysqlclient` <br />
 Troubleshooting:
 Solve mysqlclient installation problem: `sudo apt install default-libmysqlclient-dev`
-10. [OPTIONAL] Change database name in <project_name>/settings.py:
+11. [OPTIONAL] Change database name in <project_name>/settings.py:
 ```
 DATABASES = {
     'default': {
@@ -51,7 +52,11 @@ python manage.py createsuperuser --username=<name_here> --email=<email_here>
 It will ask for new password and confirmation password
 
  
-
+## Django files
+### settings.py
+- APPS are like components (little pieces that make up the django project)
+- MIDDLEWARE related to security feature
+- STATIC where I will store pictures and files
 
 
 
