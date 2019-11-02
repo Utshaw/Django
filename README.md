@@ -56,5 +56,6 @@ It will ask for new password and confirmation password
 
 
 ## Resources
+- [Full course for beginners](https://youtu.be/F5mRW0jo-U4)
 - [Installation on ubuntu](https://youtu.be/mqlCk_WCK2E)
 - [Traversy Media-YouTube](https://youtu.be/D6esTdOLXh4)
