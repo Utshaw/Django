@@ -1,4 +1,4 @@
-# Django 
+# Django  ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
 
 ## Idea
 - Sometimes referred to as **MVC**
@@ -43,6 +43,12 @@ DATABASES = {
     }
 }
 ```
+11. [ADMIN] Admin interface Link: http://127.0.0.1:8000/admin
+12. [ADMIN] create superuser
+```
+python manage.py createsuperuser --username=<name_here> --email=<email_here>
+```
+It will ask for new password and confirmation password
 
  
 
