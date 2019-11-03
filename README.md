@@ -71,8 +71,13 @@ This will create a directory with <app_name> with settings, models etc
 python manage.py makemigrations
 python manage.py migrate
 ```
-
-
+**Troubleshooting** <br />
+In order to modify the model and change datbase accordingly you need to do the following 
+1. Delete everything from `migrations` folder inside the app folder
+2. Delete `__pycache__` folder from inside the app folder 
+3. Delete sqlite databse (db.sqlite3) [If that is used as storage]
+4. Modify model as you want
+5. 
 
 ### settings.py
 - SECRET_KEY is unique key that must be private in production
@@ -88,6 +93,10 @@ python manage.py migrate
 - `python manage.py migrate` synchs django settings, apps and database with the project
 
 ## Resources
+### Django manual, documentation
+- [Django field types](https://docs.djangoproject.com/en/2.2/ref/models/fields/)
+### Django framework tutorial
 - [Full course for beginners](https://youtu.be/F5mRW0jo-U4)
-- [Installation on ubuntu](https://youtu.be/mqlCk_WCK2E)
 - [Traversy Media-YouTube](https://youtu.be/D6esTdOLXh4)
+### Django installation guide
+- [Installation on ubuntu](https://youtu.be/mqlCk_WCK2E)
