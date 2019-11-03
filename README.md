@@ -49,8 +49,14 @@ DATABASES = {
 python manage.py createsuperuser --username=<name_here> --email=<email_here>
 ```
 It will ask for new password and confirmation password
-13.`python manage.py migrate` synchs django settings, apps and database with the project
 
+13. `python manage.py migrate` synchs django settings, apps and database with the project
+
+14. Create app
+```
+python manage.py startapp <app_name> // python manage.py startapp products
+```
+This will create a directory with <app_name> with settings, models etc
 
  
 ## Django framework
