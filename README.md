@@ -35,7 +35,7 @@ Solve mysqlclient installation problem: `sudo apt install default-libmysqlclient
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'trackprice',
+        'NAME': 'utshawProject',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': '127.0.0.1',
