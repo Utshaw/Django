@@ -27,10 +27,10 @@
 `django-admin startproject <project_name>` # this will create <project_name> directory with `manage.py` and <project_name> file inside 
 8. Enter inside the <project_name> folder and run `python manage.py runserver`
 9. `python manage.py migrate` synchs django settings and apps and database with the project
-10. [OPTIONAL] Install MySQL client from virtual environment in order to use MySQL `pip install mysqlclient` <br />
+10. [MySQL] Install MySQL client from virtual environment in order to use MySQL `pip install mysqlclient` <br />
 Troubleshooting:
 Solve mysqlclient installation problem: `sudo apt install default-libmysqlclient-dev`
-11. [OPTIONAL] Change database name in <project_name>/settings.py:
+11. [MySQL] Change database name in <project_name>/settings.py:
 ```
 DATABASES = {
     'default': {
