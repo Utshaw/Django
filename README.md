@@ -1,6 +1,6 @@
 # Django  ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
 
-## Idea
+## Getting started
 - Sometimes referred to as **MVC**
 - Heavily influeneced by MVC
 - Actually MTV (Model-Template-View)
