@@ -10,7 +10,7 @@
 - Single project is thought to have multiple apps (abstract concept)
 - `virtualenv` is recommended to use. (which is isolated environment)
 
-## Installation
+## Installation and Run
 1. Install python3 <br />
 `sudo apt-get install python3`
 2. Install pip <br />
@@ -66,18 +66,18 @@ This will create a directory with <app_name> with settings, models etc
 python manage.py startapp <app_name> // python manage.py startapp products
 ```
 This will create a directory with <app_name> with settings, models etc
-- Anytime you change something in the models run these commands
+
+**What to do after making changes in model** <br />
+In order to modify the model of certain app and change datbase accordingly you need to do the following 
+1. Delete everything from `migrations` folder inside the app folder
+2. Delete `__pycache__` folder from inside the app folder 
+3. Delete sqlite databse (db.sqlite3) [If that is used as storage] from project directory. If other datbase is used delete that. [Warning: It will delete all records]
+4. Modify model as you want
+5. Run these commands
 ```
 python manage.py makemigrations
 python manage.py migrate
 ```
-**Troubleshooting** <br />
-In order to modify the model and change datbase accordingly you need to do the following 
-1. Delete everything from `migrations` folder inside the app folder
-2. Delete `__pycache__` folder from inside the app folder 
-3. Delete sqlite databse (db.sqlite3) [If that is used as storage]
-4. Modify model as you want
-5. 
 
 ### settings.py
 - SECRET_KEY is unique key that must be private in production
@@ -91,6 +91,9 @@ In order to modify the model and change datbase accordingly you need to do the f
 - AUTH_PASSWORD_VALIDATORS validates password 
 - STATIC where I will store pictures and files
 - `python manage.py migrate` synchs django settings, apps and database with the project
+
+
+
 
 ## Resources
 ### Django manual, documentation
