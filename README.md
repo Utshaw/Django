@@ -68,6 +68,7 @@ python manage.py startapp <app_name> // python manage.py startapp products
 This will create a directory with <app_name> with settings, models etc
 
 **What to do after making changes in model** <br />
+**BAD WAY** <br />
 In order to modify the model of certain app and change datbase accordingly you need to do the following 
 1. Delete everything from `migrations` folder inside the app folder
 2. Delete `__pycache__` folder from inside the app folder 
@@ -78,6 +79,14 @@ In order to modify the model of certain app and change datbase accordingly you n
 python manage.py makemigrations
 python manage.py migrate
 ```
+**GOOD WAY**
+1. Change what you need
+2. Run these commands
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+3. Give a default value to anything which is creating the problem
 
 ### settings.py
 - SECRET_KEY is unique key that must be private in production
@@ -91,6 +100,20 @@ python manage.py migrate
 - AUTH_PASSWORD_VALIDATORS validates password 
 - STATIC where I will store pictures and files
 - `python manage.py migrate` synchs django settings, apps and database with the project
+
+### entering records
+#### Using super user(Admin)
+```
+python manage.py createsuperuser --username=<name_here> --email=<email_here>
+```
+1. Go to http://127.0.0.1:8000/admin and go to app link and insert some records
+
+#### Using Command line
+```
+python manage.py shell # opens shell program 
+from sites.models import Site
+Site.objects.create(firstParam='someParam', secondParam='someParam')
+```
 
 
 
