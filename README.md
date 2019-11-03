@@ -129,6 +129,21 @@ from sites.models import Site
 Site.objects.create(firstParam='someParam', secondParam='someParam')
 ```
 
+#### views.py
+- Add response
+```
+def home_view(*args, **kwargs):
+    return HttpResponse("<h1>Hello World!</h1>")
+```
+- Route to view from urls.py <br />
+Add import statement <br />
+```
+from products.views import home_view
+```
+Add path to urlpatterns (this will replace default home page)
+```
+path('', home_view, name='home')
+```
 
 
 
