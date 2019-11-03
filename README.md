@@ -26,11 +26,10 @@
 7. Create Django project <br />
 `django-admin startproject <project_name>` # this will create <project_name> directory with `manage.py` and <project_name> file inside 
 8. Enter inside the <project_name> folder and run `python manage.py runserver`
-9. `python manage.py migrate` synchs django settings and apps and database with the project
-10. [MySQL] Install MySQL client from virtual environment in order to use MySQL `pip install mysqlclient` <br />
+9. [MySQL] Install MySQL client from virtual environment in order to use MySQL `pip install mysqlclient` <br />
 Troubleshooting:
 Solve mysqlclient installation problem: `sudo apt install default-libmysqlclient-dev`
-11. [MySQL] Change database name in <project_name>/settings.py:
+10. [MySQL] Change database name in <project_name>/settings.py:
 ```
 DATABASES = {
     'default': {
@@ -50,7 +49,7 @@ DATABASES = {
 python manage.py createsuperuser --username=<name_here> --email=<email_here>
 ```
 It will ask for new password and confirmation password
-
+13.`python manage.py migrate` synchs django settings, apps and database with the project
 
 
  
@@ -70,11 +69,17 @@ python manage.py migrate
 
 
 ### settings.py
-- APPS are like components (little pieces that make up the django project)
+- SECRET_KEY is unique key that must be private in production
+- DEBUG must be set FALSE in production
+- ALLOWED_HOSTS mean domain names that are allowed
+- INSTALLED_APPS are like components (little pieces that make up the django project)
 - MIDDLEWARE related to security feature
+- ROUTE_URLCONF deals with routing
+- TEMPLATES where HTML pages are stored
+- DATABASES which databse is used by django
+- AUTH_PASSWORD_VALIDATORS validates password 
 - STATIC where I will store pictures and files
-
-
+- `python manage.py migrate` synchs django settings, apps and database with the project
 
 ## Resources
 - [Full course for beginners](https://youtu.be/F5mRW0jo-U4)
