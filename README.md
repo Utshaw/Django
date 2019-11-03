@@ -101,6 +101,20 @@ python manage.py migrate
 - STATIC where I will store pictures and files
 - `python manage.py migrate` synchs django settings, apps and database with the project
 
+### admin.py
+- Create Admin
+```
+python manage.py createsuperuser --username=<name_here> --email=<email_here>
+```
+- Add Admin access to certain models
+```
+from .models import *
+
+admin.site.register(<Class_Name_1>)
+admin.site.register(<Class_Name_2>)
+admin.site.register(<Class_Name_3>)
+```
+
 ### entering records
 #### Using super user(Admin)
 ```
