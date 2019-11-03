@@ -51,8 +51,24 @@ python manage.py createsuperuser --username=<name_here> --email=<email_here>
 ```
 It will ask for new password and confirmation password
 
+
+
  
-## Django files
+## Django framework
+### models.py
+- Create app
+```
+python manage.py startapp <app_name> // python manage.py startapp products
+```
+This will create a directory with <app_name> with settings, models etc
+- Anytime you change something in the models run these commands
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+
+
+
 ### settings.py
 - APPS are like components (little pieces that make up the django project)
 - MIDDLEWARE related to security feature
