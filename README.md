@@ -129,11 +129,11 @@ from sites.models import Site
 Site.objects.create(firstParam='someParam', secondParam='someParam')
 ```
 
-#### views.py
-- Add response
+#### <app_name>/views.py
+- Add custom html
 ```
-def home_view(*args, **kwargs):
-    return HttpResponse("<h1>Hello World!</h1>")
+def home_view(request, *args, **kwargs):
+    return render(request, "home.html", {})
 ```
 - Route to view from urls.py <br />
 Add import statement <br />
