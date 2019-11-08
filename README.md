@@ -58,7 +58,13 @@ python manage.py startapp <app_name> // python manage.py startapp products
 ```
 This will create a directory with <app_name> with settings, models etc
 
- 
+**Troubleshooting** <br />
+Error installing `mysqlclient` in windows <br />
+- Install [Microsoft Visual C++ Build tools](https://www.scivision.co/python-windows-visual-c-14-required/) and follow the instructions
+- Download specific tools for particular python version (`mysqlclient‑1.4.5‑cp38‑cp38‑win32.whl` means `mysqlclient` version 1.4.5 for python 3.8 version). **Install this win32 for 64-bit Windows too**
+- Activate virtual environment (On CMD: `./venv/Scripts/activate`)
+- install the tool (`pip install ./path/mysqlclient‑1.4.5‑cp38‑cp38‑win32.whl`)
+
 ## Django framework
 ### models.py
 - Create app
@@ -130,12 +136,19 @@ Site.objects.create(firstParam='someParam', secondParam='someParam')
 ```
 
 #### <app_name>/views.py
+**root=project_name**
 - Add custom html
 ```
 def home_view(request, *args, **kwargs):
     return render(request, "home.html", {})
 ```
-- Route to view from urls.py <br />
+- Add templates folder in the root directory (where `manage.py` is located)
+- Create `home.html` file inside
+- Add the path inside `TEMPLATES` array's `DIRS` located at `<root_folder>/<root_folder>/settings.py`
+```
+os.path.join(BASE_DIR, "templates")
+```
+- Route to view from `<root>/<root>/urls.py` <br />
 Add import statement <br />
 ```
 from products.views import home_view
